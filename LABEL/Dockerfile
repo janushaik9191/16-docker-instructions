@@ -1,6 +1,4 @@
 FROM almalinux:9
-RUN dnf install nginx -y
-CMD [ "nginx","-g","deamon off;" ]
-LABEL container="nginx" \
-      author="meerjan" \
+# LABEL instruction adds metadata to the image, it will helpful in filtering images based on label
+LABEL author="meerjan" \
       for="docker purpose"
