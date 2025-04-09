@@ -1,6 +1,6 @@
 FROM almalinux:9
 RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/index.html
-# COPY instruction is used to copy files from local to image
 COPY index.html /usr/share/nginx/html/index.html
+# COPY is used to copy files from local to image
 CMD ["nginx", "-g", "daemon off;"]
